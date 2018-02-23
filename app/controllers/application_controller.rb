@@ -31,11 +31,29 @@ class ApplicationController < Sinatra::Base
     erb :letter
   end
   
+  get '/petition' do
+    erb :petition
+  end  
+  
   post '/results' do
-    @name = name(params[:my_name])
-    @jimmy = email(params[:my_email])
-    @number = number(params[:my_number])
-    @zip = zip(params[:my_zip])
+    @firstname = fname(params[:my_first_name])
+    @lastname = lname(params[:my_last_name])
+    # @number = number(params[:my_number])
+    # @address = address(params[:my_address])
+    # @city = city(params[:my_city])
+    # @state = state(params[:my_state])
+    # @zip = zip(params[:my_zip])
+    # @congressmanfn = cfname(params[:my_congressman_first])
+    # @congressmanln = clname(params[:my_congressman_last])
+    # @hvs1 = senatehouse1(params[:housesenate])
+    # @hvs2 = senatehouse2(params[:housesenate])
+    # @officeaddress = caddress(params[:congressman_address])
+    # @ccity = ccity(params[:ccity])
+    # @cstate = cstate(params[:cstate])
+    # @czip = czip(params[:czip])
+    
+    
+    
     
     erb :results
   end
